@@ -1,0 +1,49 @@
+Item|Cateory|SR|TT|MB|Gold|Recipe|Note
+Health Potion|Consumables|1|1|1|50|NA|Consume:Regenerates 5 health every half-second for 15 seconds, restoring a total of 150 health. Limitations:Limited to 5 at one time. Limited to one type of Healing Potion.
+Vision Ward|Consumables|1|0|0|75|NA|Consume:Place a visible ward with 1100 units range sight and 1000 units range true sight.\nUntil killed, it regenerates 1 health every 3 seconds after 5 seconds out of combat. Passive:Limit 1 Vision Ward on the map per player. Limitations:Can only carry 2 Vision Wards in inventory
+Refillable Potion|Consumables|1|1|1|150|NA|Consume:Regenerates 5.21 health every half-second for 12 seconds, restoring a total of 125 health. Passive:Holds up to 2 charges that refill upon visiting the store. Limitations:Limited to one type of Potion.
+Corrupting Potion|Consumabels|1|1|1|500|NA|Consume:For 12 seconds, regenerates 5.20 health and 3.125 mana every half-second for a total of 125 health and 75 mana as well as grants TOUCH OF CORRUPTION. Passive:Holds up to 3 charges that refill upon visiting the store. Limitations:Limited to one type of Potion. TOUCH-OF-CORRUPTION:Abilities and basic attacks apply a burn that damages enemy champions for 15 - 30 (based on level) bonus magic damage over 3 seconds. Bonus damage is halved for area of effect and damage over time effects. \nCorrupting Potion can be used even at full health and mana.
+Hunter's Potion|Consumables|1|1|0|400|NA|Consume:Regenerates 3.75 health and 2.18 mana every half-second for 8 seconds, restoring a total of 60 health and 35 mana. Passive:Holds up to 5 charges that refill upon visiting the store. Killing large monsters grants one charge.\nKilling a large monster at maximum charges will trigger the restoration at no cost to the charges. Limitations:Limited to one type of Potion.
+Elixir of Iron|Consumables|1|1|1|500|NA|Consume:Grants the following effects for 3 minutes;\n+300 Health, +25% TENACITY, increased champion size, and PATH OF IRON. Limitations:Only one Elixir may be active at a time. Requirements:Level 9 required to purchase. UNIQUE-PASSIVE-PATH-OF-IRON:Leaves a path behind that grants allied champions +15% movement speed. TENACITY: Reduces the duration of all crowd control effects by 25%, except for Suppression, Stasis and Airborne effects such as Knockbacks, Knockups and Pulls.
+Elixir of Sorcery|Consumables|1|1|1|500|NA|Consume:Grants the following effects for 3 minutes;\n+50 Ablilty Power, +15 flat mana regeneration, and SORCERY. UNIQUE-Passive-SORCERY:Danagubg a champion or turret deals 25 bonus true damage. (5 second cooldown against champions. No cooldown against turrets.) Limitations:Only one Elixir may be active at a time. Requiremments:Level 9 required to purchase.
+Elixir of Wrath|Consumables|1|1|1|500|NA|Consume:Grants the following effects for 3 minutes;\n+30 Attack Damage and BLOODLUST. UNIQUE-PASSIVE-BLOODLUST:Dealing physical damage to champions heals for 15% of the damage dealt. Limitations:Only one Elixir may be active at a time. Requirements:Level 9 required to purchase.
+Oracle's Extract|Consumables|0|0|1|300|NA
+Total Biscuit of Rejuvenation|Consumabels|1|1|1|50|NA
+Poro-snax|Consumables|0|0|1|Special|NA
+Sweeping Lens|Trinkets|1|0|0|0|NA
+Oracle Alteration|Trinkets|1|0|0|0|NA
+Warding Totem|Trinkets|1|0|0|0|NA
+Farsight Alteration|Trinkets|1|0|0|0|NA
+Arcane Sweeper|Trinkets|0|1|0|Special|NA
+Ancient Coin|Starting Items|1|1|1|350|NA
+Cull|Starting Items|1|1|1|450|NA
+The Dark Seal|Starting Items|1|0|0|350|NA
+Doran's Blade|Starting Items|1|1|0|450|NA
+Doran's Ring|Starting Items|1|1|0|400|NA
+Doran's Shield|Starting Items|1|1|0|450|NA
+Guardian's Hammer|Starting Items|0|0|1|950|NA
+Guardian's Horn|Starting Items|0|0|1|950|NA
+Guardian's Orb|Starting Items|0|0|1|950|NA
+Relic Shield|Starting Items|1|1|1|350|NA
+Spellthief's Edge|Starting Items|1|1|1|350|NA
+Hunter's Machete|Jungle Items and Enchantments|1|1|0|350|NA
+Hunter's Talisman|Jungle Items and Enchantments|1|1|0|350|NA
+Skirmisher's Sabre|Jungle Items and Enchantments|1|1|0|1000|Hunter's Machete+Hunter's Talisman+300
+Stalker's Blade|Jungle Items and Enchantments|1|1|0|1000|Hunter's Machete+Hunter's Talisman+300
+Tracker's Knife|Jungle Items and Enchantments|1|0|0|1000|Hunter's Machete+Hunter's Talisman+300
+Bloodrazor|Jungle Items and Enchantments|1|1|0|1625|NA
+Cinderhulk|Jungle Items and Enchantments|1|1|0|1625|NA
+Runic Echoes|Jungle Items and Enchantments|1|1|0|1625|NA
+Warrior|Jungle Items and Enchantments|1|1|0|1625|NA
+Boots of Speed|Boots|1|1|1|300|NA
+Berserker's Greaves|Boots|1|1|1|1100|Boots of Speed+Dagger+500
+Boots of Mobility|Boots|1|1|1|900|Boots of Speed+600
+Boots of Swiftness|Boots|1|1|1|900|Boots of Speed+600
+Ionian Boots of Lucidity|Boots|1|1|1|900|Boots of Speed+600
+Mercury's Treads|Boots|1|1|1|1100|Boots of Speed+Null-Magic Mantle+350
+Ninja Tabi|Boots|1|1|1|1100|Boots of Speed+Cloth Armor+500
+Sorcerer's Shoes|Boots|1|1|1|1100|Boots of Speed+800
+
+Amplifying Tome|Basic Items|1|1|1|435|NA
+B. F. Sword|Basic Items|1|1|1|1300|NA
+Blasting Wand|Basic Items|1|1|1|850|NA

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LolInfo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_champion">ChampionActivity</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="title_activity_champ_detail">ChampDetailActivity</string>
+</resources>
