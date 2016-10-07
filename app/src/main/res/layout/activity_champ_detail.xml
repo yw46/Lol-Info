@@ -17,7 +17,7 @@
             android:layout_height="fill_parent">
 
             <LinearLayout
-                android:id="@+id/llChampDetail"
+                android:id="@+id/llCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
@@ -25,7 +25,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/ivchampChampDetail"
+                    android:id="@+id/ivchampCD"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/champion_square" />
@@ -37,7 +37,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvchampnameChampDetail"
+                        android:id="@+id/tvchampnameCD"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Champion Name (Tank, Fighter)"
@@ -45,7 +45,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/tvchampChampDetail"
+                        android:id="@+id/tvchampCD"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Attack Range: N/A\nMovement Speed: N/A\nAd: N/A\nAttack Speed: N/A" />
@@ -54,115 +54,127 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/vline0ChampDetail"
+                android:id="@+id/vline0CD"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_below="@+id/llChampDetail"
+                android:layout_below="@+id/llCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/holo_purple" />
 
             <TextView
-                android:id="@+id/tvabilitiesChampDetail"
+                android:id="@+id/tvaCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/vline0ChampDetail"
+                android:layout_below="@+id/vline0CD"
                 android:text="Abilities"
                 android:textColor="@android:color/black"
                 android:textSize="32sp" />
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llabilitiesCD"
+                android:layout_below="@+id/tvaCD">
             <LinearLayout
-                android:id="@+id/llabilitiesChampDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvabilitiesChampDetail"
                 android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivpCD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/champion_square"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/ivpChampDeatil"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/champion_square" />
-
-                <ImageView
-                    android:id="@+id/ivqChampDeatil"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/ivqCD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/champion_square" />
+                    android:background="@drawable/champion_square"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/ivwChampDeatil"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/ivwCD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/champion_square" />
+                    android:background="@drawable/champion_square"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/iveChampDeatil"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/iveCD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/champion_square" />
+                    android:background="@drawable/champion_square"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/ivrChampDeatil"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/ivrCD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/champion_square" />
+                    android:background="@drawable/champion_square"
+                    android:layout_weight="1"/>
+
             </LinearLayout>
+        </HorizontalScrollView>
 
             <TextView
-                android:id="@+id/tvabilitynameChampDetail"
+                android:id="@+id/tvaNameCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/llabilitiesChampDetail"
+                android:layout_below="@id/llabilitiesCD"
                 android:layout_marginTop="10dp"
                 android:text="Blood(Passive)"
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/tvabilitydescriptionChampDetail"
+                android:id="@+id/tvaDescriptionCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvabilitynameChampDetail"
+                android:layout_below="@+id/tvaNameCD"
                 android:layout_marginTop="0dp"
                 android:text="Description\nDescription\nDescription" />
 
             <View
-                android:id="@+id/vline0ChampDetail1"
+                android:id="@+id/vline0CD1"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_below="@+id/tvabilitydescriptionChampDetail"
+                android:layout_below="@+id/tvaDescriptionCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/holo_purple" />
 
             <TextView
-                android:id="@+id/tvearlygameChampDetail"
+                android:id="@+id/tvearlygameCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/vline0ChampDetail1"
+                android:layout_below="@+id/vline0CD1"
                 android:text="Early Game"
                 android:textColor="@android:color/black"
                 android:textSize="32sp" />
 
             <!-- skill point 1 - 6 -->
             <TextView
-                android:id="@+id/tvespChampDetail"
+                android:id="@+id/tvespCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvearlygameChampDetail"
+                android:layout_below="@+id/tvearlygameCD"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="10dp"
                 android:text="Skill Poiont" />
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llearlyskillCD"
+                android:layout_below="@+id/tvespCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/llearlyskillChampDetail"
-                android:layout_below="@+id/tvespChampDetail"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -172,13 +184,13 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv1ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv1CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv1ChampDetail"
+                        android:id="@+id/tv1CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -193,13 +205,13 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv2ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv2CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv2ChampDetail"
+                        android:id="@+id/tv2CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -214,13 +226,13 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv3ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv3CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv3ChampDetail"
+                        android:id="@+id/tv3CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -235,13 +247,13 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv4y0ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv4CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv4y0ChampDetail"
+                        android:id="@+id/tv4CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -256,13 +268,13 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv5ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv5CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv5ChampDetail"
+                        android:id="@+id/tv5CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -277,26 +289,27 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv6ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv6CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv6ChampDetail"
+                        android:id="@+id/tv6CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="r" />
                 </LinearLayout>
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- skill point 1 - 6 done -->
 
             <View
-                android:id="@+id/vline1ChampDetail"
+                android:id="@+id/vline1CD"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/llearlyskillChampDetail"
+                android:layout_below="@+id/llearlyskillCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray" />
@@ -305,81 +318,89 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvearlygameitemChampDetail"
-                android:layout_below="@+id/vline1ChampDetail"
+                android:id="@+id/tvearlygameitemCD"
+                android:layout_below="@+id/vline1CD"
                 android:layout_marginBottom="10dp"
                 android:text="Items"/>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llearlyitemCD"
+                android:layout_below="@+id/tvearlygameitemCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/llearlyitemChampDetail"
-                android:orientation="horizontal"
-                android:layout_below="@+id/tvearlygameitemChampDetail">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivearlyitem01ChampDetail"
-                    android:background="@drawable/champion_square"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivearlyitem01CD"
+                    android:background="@drawable/champion_square" />
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivearlyitem02ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivearlyitem02CD"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/champion_square"/>
+                    android:background="@drawable/champion_square" />
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivearlyitem03ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivearlyitem03CD"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/champion_square"/>
+                    android:background="@drawable/champion_square" />
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- Items 1 - 6 done -->
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvearlynoteChampDetail"
-                android:layout_below="@id/llearlyitemChampDetail"
+                android:id="@+id/tvearlynoteCD"
+                android:layout_below="@id/llearlyitemCD"
                 android:layout_marginTop="10dp"
                 android:text="Note Early"/>
 
             <View
-                android:id="@+id/vline2ChampDetail1"
+                android:id="@+id/vline2CD1"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_below="@+id/tvearlynoteChampDetail"
+                android:layout_below="@+id/tvearlynoteCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/holo_purple" />
 
             <TextView
-                android:id="@+id/tvmidgameChampDetail"
+                android:id="@+id/tvmidgameCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/vline2ChampDetail1"
+                android:layout_below="@+id/vline2CD1"
                 android:text="Mid Game"
                 android:textColor="@android:color/black"
                 android:textSize="32sp" />
 
             <!-- skill point 7 - 12 -->
             <TextView
-                android:id="@+id/tvmspChampDetail"
+                android:id="@+id/tvmspCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvmidgameChampDetail"
+                android:layout_below="@+id/tvmidgameCD"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="10dp"
                 android:text="Skill Poiont" />
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llmidskillCD"
+                android:layout_below="@+id/tvmspCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/llmidskillChampDetail"
-                android:layout_below="@+id/tvmspChampDetail"
+
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -389,14 +410,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv7ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv7CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv7ChampDetail"
+                        android:id="@+id/tv7CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -411,14 +432,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv8ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv8CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv8ChampDetail"
+                        android:id="@+id/tv8CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -433,14 +454,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv9ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv9CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv9ChampDetail"
+                        android:id="@+id/tv9CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -455,14 +476,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv10ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv10CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv10ChampDetail"
+                        android:id="@+id/tv10CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -477,14 +498,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv11ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv11CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv11ChampDetail"
+                        android:id="@+id/tv11CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -499,26 +520,27 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv12ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv12CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square" />
 
                     <TextView
-                        android:id="@+id/tv12ChampDetail"
+                        android:id="@+id/tv12CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="r" />
                 </LinearLayout>
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- skill point 7 - 12 done -->
 
             <View
-                android:id="@+id/vline3ChampDetail"
+                android:id="@+id/vline3CD"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/llmidskillChampDetail"
+                android:layout_below="@+id/llmidskillCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray" />
@@ -527,88 +549,95 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvmidgameitemChampDetail"
-                android:layout_below="@+id/vline3ChampDetail"
+                android:id="@+id/tvmidgameitemCD"
+                android:layout_below="@+id/vline3CD"
                 android:layout_marginBottom="10dp"
                 android:text="Items"/>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llmiditemCD"
+                android:layout_below="@+id/tvmidgameitemCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/llmiditemChampDetail"
-                android:orientation="horizontal"
-                android:layout_below="@+id/tvmidgameitemChampDetail">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivmiditem01ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivmiditem01CD"
                     android:background="@drawable/champion_square"/>
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivmiditem02ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivmiditem02CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"/>
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivmiditem03ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivmiditem03CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"/>
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/ivmiditem04ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivmiditem04CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"/>
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- Items 7 - 12 done -->
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvmidnoteChampDetail"
-                android:layout_below="@id/llmiditemChampDetail"
+                android:id="@+id/tvmidnoteCD"
+                android:layout_below="@id/llmiditemCD"
                 android:layout_marginTop="10dp"
                 android:text="Note Mid"/>
 
             <View
-                android:id="@+id/vline4ChampDetail1"
+                android:id="@+id/vline4CD1"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_below="@+id/tvmidnoteChampDetail"
+                android:layout_below="@+id/tvmidnoteCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/holo_purple" />
 
             <TextView
-                android:id="@+id/tvlategameChampDetail"
+                android:id="@+id/tvlategameCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/vline4ChampDetail1"
+                android:layout_below="@+id/vline4CD1"
                 android:text="Late Game"
                 android:textColor="@android:color/black"
                 android:textSize="32sp" />
 
             <!-- skill point 13 - 18 -->
             <TextView
-                android:id="@+id/tvlspChampDetail"
+                android:id="@+id/tvlspCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvlategameChampDetail"
+                android:layout_below="@+id/tvlategameCD"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="10dp"
                 android:text="Skill Poiont" />
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lllateskillCD"
+                android:layout_below="@+id/tvlspCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lllateskillChampDetail"
-                android:layout_below="@+id/tvlspChampDetail"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -618,14 +647,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv13ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv13CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv13ChampDetail"
+                        android:id="@+id/tv13CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -640,14 +669,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv14ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv14CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv14ChampDetail"
+                        android:id="@+id/tv14CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -662,14 +691,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv15ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv15CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv15ChampDetail"
+                        android:id="@+id/tv15CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -684,14 +713,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv16ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv16CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv16ChampDetail"
+                        android:id="@+id/tv16CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -706,14 +735,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/iv17ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:id="@+id/iv17CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/champion_square"
                         android:adjustViewBounds="true" />
 
                     <TextView
-                        android:id="@+id/tv17ChampDetail"
+                        android:id="@+id/tv17CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -725,29 +754,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/ll18CD">
 
                     <ImageView
-                        android:id="@+id/iv18ChampDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:background="@drawable/champion_square" />
+                        android:id="@+id/iv18CD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/champion_square"/>
 
                     <TextView
-                        android:id="@+id/tv18ChampDetail"
+                        android:id="@+id/tv18CD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="r" />
                 </LinearLayout>
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- skill point 13 - 18 done -->
 
             <View
-                android:id="@+id/vline5ChampDetail"
+                android:id="@+id/vline5CD"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/lllateskillChampDetail"
+                android:layout_below="@+id/lllateskillCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray" />
@@ -756,80 +787,84 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvlategameitemChampDetail"
-                android:layout_below="@+id/vline5ChampDetail"
+                android:id="@+id/tvlategameitemCD"
+                android:layout_below="@+id/vline5CD"
                 android:layout_marginBottom="10dp"
                 android:text="Items Set"/>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lllateitemCD"
+                android:layout_below="@+id/tvlategameitemCD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lllateitemChampDetail"
-                android:orientation="horizontal"
-                android:layout_below="@+id/tvlategameitemChampDetail">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem01ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem01CD"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem02ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem02CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem03ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem03CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem04ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem04CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem05ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem05CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem06ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem06CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
             </LinearLayout>
+            </HorizontalScrollView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvlatenoteChampDetail"
-                android:layout_below="@id/lllateitemChampDetail"
+                android:id="@+id/tvlatenoteCD"
+                android:layout_below="@id/lllateitemCD"
                 android:layout_marginTop="10dp"
                 android:text="Note Late 1"/>
             <!-- Items 13 - 18 done -->
 
             <View
-                android:id="@+id/vline6ChampDetail"
+                android:id="@+id/vline6CD"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/tvlatenoteChampDetail"
+                android:layout_below="@+id/tvlatenoteCD"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray" />
@@ -838,72 +873,76 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvlategameitem2ChampDetail"
-                android:layout_below="@+id/vline6ChampDetail"
+                android:id="@+id/tvlategameitem2CD"
+                android:layout_below="@+id/vline6CD"
                 android:layout_marginBottom="10dp"
                 android:text="Items Set 2"/>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lllateitem2CD"
+                android:layout_below="@+id/tvlategameitem2CD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lllateitem2ChampDetail"
-                android:orientation="horizontal"
-                android:layout_below="@+id/tvlategameitem2ChampDetail">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem201ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem201CD"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem202ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem202CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem203ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem203CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem204ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem204CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem205ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem205CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/ivlateitem206ChampDetail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ivlateitem206CD"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/champion_square"
                     android:layout_weight="1"/>
             </LinearLayout>
+            </HorizontalScrollView>
             <!-- Item set 2 13 - 18 done -->
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvlatenote2ChampDetail"
-                android:layout_below="@id/lllateitem2ChampDetail"
+                android:id="@+id/tvlatenote2CD"
+                android:layout_below="@id/lllateitem2CD"
                 android:layout_marginTop="10dp"
                 android:text="Note Late 2"/>
 

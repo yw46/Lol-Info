@@ -12,9 +12,14 @@
         android:id="@+id/etTest"
         android:singleLine="true"/>
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvTest"
-        android:layout_below="@+id/etTest"/>
+        android:layout_below="@+id/etTest">
+        <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTest"
+            android:layout_below="@+id/etTest"/>
+    </ScrollView>
 
 </RelativeLayout>

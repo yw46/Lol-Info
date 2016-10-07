@@ -1,6 +1,7 @@
 package com.fun.yishuo.lolinfo.Model;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -129,6 +130,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // Ratul Ghosh
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+//        Cursor cursor = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
+//        String table_name = cursor.getString( cursor.getColumnIndex("name"));
+//        db.execSQL("DROP TABLE IF EXISTS" + table_name);
+//        onCreate(db);
+
         if(newVersion>oldVersion) {
             try {
                 copyDataBase();

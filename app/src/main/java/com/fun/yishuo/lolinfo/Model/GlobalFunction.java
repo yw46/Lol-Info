@@ -1,7 +1,16 @@
 package com.fun.yishuo.lolinfo.Model;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.BitmapFactory;
+
 import com.fun.yishuo.lolinfo.R;
 
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -9,6 +18,7 @@ import java.util.ResourceBundle;
  */
 public class GlobalFunction {
 
+    public static final int DB_VERSION = 3;
     public static int getDrawable(String champ) {
         int i = champ.length();
         char c0, c1, c2, c3;
@@ -506,5 +516,62 @@ public class GlobalFunction {
             return R.drawable.champion_square;
         }
         return R.drawable.champion_square;
+    }
+
+    public static ChampSkill getChampSkill(Context context, String champName) {
+        ChampSkill tmpChampSkill = new ChampSkill(champName);
+        if (champName.equals("noChamp")) {
+            return tmpChampSkill;
+        }
+        DataBaseHelper dbHelper = new DataBaseHelper(context, "lolchampskill.db");
+
+        try {
+            dbHelper.createDataBase();
+        } catch (IOException e) {
+            throw new Error("Unable to create db");
+        }
+
+        try {
+            dbHelper.openDataBase();
+        } catch (SQLException e) {
+            throw new Error("Unable to open db");
+        }
+
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = "SELECT pname, p, qname, q, wname, w, ename, e, rname, r FROM LOLCHAMPSKILL WHERE champ = \"" + champName + "\"";
+        Cursor cursor = db.rawQuery(sql, new String[]{});
+
+        if (cursor.moveToFirst()) {
+            tmpChampSkill.setPname(cursor.getString(0));
+            tmpChampSkill.setP(cursor.getString(1));
+            tmpChampSkill.setQname(cursor.getString(2));
+            tmpChampSkill.setQ(cursor.getString(3));
+            tmpChampSkill.setWname(cursor.getString(4));
+            tmpChampSkill.setW(cursor.getString(5));
+            tmpChampSkill.setEname(cursor.getString(6));
+            tmpChampSkill.setE(cursor.getString(7));
+            tmpChampSkill.setRname(cursor.getString(8));
+            tmpChampSkill.setR(cursor.getString(9));
+        }
+        cursor.close();
+        db.close();
+        dbHelper.close();
+
+        return tmpChampSkill;
+    }
+
+    public static String getNewLine(String origional){
+        String tmpstr = "";
+        int i = 0;
+        if (!origional.contains("\\n")) {
+            return origional;
+        }
+        while (origional.contains("\\n")) {
+            i = origional.indexOf("\\n");
+            tmpstr += origional.substring(0, i);
+            tmpstr += "\n";
+            origional = origional.substring(i+2);
+        }
+        return tmpstr;
     }
 }
