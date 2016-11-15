@@ -52,7 +52,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
      * Creates a empty database on the system and rewrites it with your own database.
      * */
     public void createDataBase() throws IOException {
-        boolean dbExist = checkDataBase();
+        // TODO either checkDataBase() or false
+        //boolean dbExist = checkDataBase();
+        boolean dbExist = false;
+
         if (!dbExist) {
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
@@ -63,7 +66,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 throw new Error("Error copying database");
             }
         }
-
     }
 
 

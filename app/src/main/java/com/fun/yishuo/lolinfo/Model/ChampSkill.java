@@ -1,15 +1,55 @@
 package com.fun.yishuo.lolinfo.Model;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.BitmapFactory;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 /**
  * Created by Yishuo Wang on 9/17/16.
  */
 public class ChampSkill {
-    private String champName, p, pname, qname, q, wname, w, ename, e, rname, r;
+    private String champName, p, pname, qname, q, wname, w, ename, e, rname, r, skillOrder;
+    private ArrayList<String> itemSetEarly, itemSetMid, itemSetLate0, itemSetLate1;
+    private ArrayList<byte []> skillImage;
 
     public ChampSkill(String champName) {
         this.champName = champName;
         if (champName.equals("noChamp")) {
             noName();
+        }
+        skillImage = new ArrayList<>();
+    }
+
+    public ArrayList<byte[]> getSkillImage() {
+        return skillImage;
+    }
+
+    public void setSkillImage(ArrayList<byte[]> skillImage) {
+        this.skillImage = skillImage;
+    }
+
+    public void addSkillImage(byte[] img) {
+        this.skillImage.add(img);
+    }
+
+    public byte[] getImage(char skill) {
+        switch (skill) {
+            case 'p':
+                return skillImage.get(0);
+            case 'q':
+                return skillImage.get(1);
+            case 'w':
+                return skillImage.get(2);
+            case 'e':
+                return skillImage.get(3);
+            case 'r':
+                return skillImage.get(4);
+            default:
+                return null;
         }
     }
 
@@ -112,5 +152,45 @@ public class ChampSkill {
 
     public void setR(String r) {
         this.r = r;
+    }
+
+    public String getSkillOrder() {
+        return skillOrder;
+    }
+
+    public void setSkillOrder(String skillOrder) {
+        this.skillOrder = skillOrder;
+    }
+
+    public ArrayList<String> getItemSetEarly() {
+        return itemSetEarly;
+    }
+
+    public void setItemSetEarly(ArrayList<String> itemSetEarly) {
+        this.itemSetEarly = itemSetEarly;
+    }
+
+    public ArrayList<String> getItemSetMid() {
+        return itemSetMid;
+    }
+
+    public void setItemSetMid(ArrayList<String> itemSetMid) {
+        this.itemSetMid = itemSetMid;
+    }
+
+    public ArrayList<String> getItemSetLate0() {
+        return itemSetLate0;
+    }
+
+    public void setItemSetLate0(ArrayList<String> itemSetLate0) {
+        this.itemSetLate0 = itemSetLate0;
+    }
+
+    public ArrayList<String> getItemSetLate1() {
+        return itemSetLate1;
+    }
+
+    public void setItemSetLate1(ArrayList<String> itemSetLate1) {
+        this.itemSetLate1 = itemSetLate1;
     }
 }

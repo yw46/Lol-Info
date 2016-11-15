@@ -86,7 +86,7 @@ public class ChampDetailActivity extends Activity {
         ivchampCD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "ivchampChampDetail", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "ivchampChampDetail", Toast.LENGTH_SHORT).show();
                 //textstr += " (Tank)";
                 //tvchampnameChampDetail.setText(textstr);
                 alIVs.get(0).setImageResource(R.drawable.champ_amumu_square);
@@ -251,24 +251,58 @@ public class ChampDetailActivity extends Activity {
         }
 
         db = dbHelper.getWritableDatabase();
-        sql = "SELECT pthumbnail, qthumbnail, wthumbnail, ethumbnail, rthumbnail FROM LOLCHAMPSKILL WHERE name = \"" + champName + "\"";
+        sql = "SELECT pthumbnail, qthumbnail, wthumbnail, ethumbnail, rthumbnail, " +
+                "skillorder, itemsetearly, itemsetmid, itemsetlate0, itemsetlate1" +
+                " FROM LOLCHAMPSKILL WHERE champ = \"" + champName + "\"";
         cursor = db.rawQuery(sql, new String[]{});
 
+        byte[] blob;
+        // use if or for
         if (cursor.moveToFirst()) {
-            byte[] blob = cursor.getBlob(0);
+            blob = cursor.getBlob(0);
             ivpCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+            champSkill.addSkillImage(blob);
             blob = cursor.getBlob(1);
             ivqCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+            champSkill.addSkillImage(blob);
             blob = cursor.getBlob(2);
             ivwCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+            champSkill.addSkillImage(blob);
             blob = cursor.getBlob(3);
             iveCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+            champSkill.addSkillImage(blob);
             blob = cursor.getBlob(4);
             ivrCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+            champSkill.addSkillImage(blob);
+            champSkill.setSkillOrder(cursor.getString(9));
         }
+
+        // not working
+//        byte[] blob;
+//        for (int i = 0; i < 5; i++) {
+//            blob = cursor.getBlob(i);
+//            champSkill.addSkillImage(blob);
+//        }
+//
+//        blob = champSkill.getImage('p');
+//        ivpCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+//        blob = champSkill.getImage('q');
+//        ivqCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+//        blob = champSkill.getImage('w');
+//        ivwCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+//        blob = champSkill.getImage('e');
+//        iveCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+//        blob = champSkill.getImage('r');
+//        ivrCD.setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
+
         cursor.close();
         db.close();
         dbHelper.close();
+
+        //Toast.makeText(getApplicationContext(), String.valueOf(champSkill.getSkillImage().size()), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), champSkill.getSkillOrder(), Toast.LENGTH_SHORT).show();
+        blob = champSkill.getImage('p');
+        alIVs.get(0).setImageBitmap(BitmapFactory.decodeByteArray(blob, 0, blob.length));
     }
 
     private void setupVariable() {
